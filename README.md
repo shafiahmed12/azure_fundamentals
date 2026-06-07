@@ -1,1 +1,1 @@
-# azure_fundamentals
+# Azure Fundamentals (az-900)
