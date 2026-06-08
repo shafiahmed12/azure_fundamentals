@@ -64,11 +64,11 @@ and replaced by the cloud provider without interruption to you.
 
 ##### Cloud computing responsibilities
 
-![cloud_computing_responsibilities](cloud_computing_responsibilities.png)
+![cloud_computing_responsibilities](cloud_concepts\cloud_computing_responsibilities.png)
 
 ##### Azure Deployment models
 
-![azure_deployment_models](azure_deployment_models.png)
+![azure_deployment_models](cloud_concepts\azure_deployment_models.png.png)
 
 ##### Total Cost of Ownership
 
@@ -90,7 +90,7 @@ For Azure
 - Training
 -
 
-![azure_deployment_models](total_cost_of_ownership.png)
+![azure_deployment_models](cloud_concepts\total_cost_of_ownership.png)
 
 ##### Capital Expenditure (CAPEX)
 
@@ -125,35 +125,46 @@ in equipment
 
 #### High Elasticity
 
-Your ability to automatically increase or decrease your capacity based on the current demand of traffic, memory and computing power
+Your ability to automatically increase or decrease your capacity based on the
+current demand of traffic, memory and computing power
 
 > Horizontal Scaling
-  - Scaling Out -> Add more servers of the same size
-  - Scaling in -> Removing more servers of the same size
 
-  Vertical scaling is generally hard for traditional architecture so you will usually only see horizontal scaling described with elasticity
+- Scaling Out -> Add more servers of the same size
+- Scaling in -> Removing more servers of the same size
+
+  Vertical scaling is generally hard for traditional architecture so you will
+  usually only see horizontal scaling described with elasticity
 
 How do you achieve this in Azure?
-We use Azure VM Scale Set -> it automatically increases or decreases in response to demand or a defined schedule.
+We use Azure VM Scale Set -> it automatically increases or decreases in response
+to demand or a defined schedule.
 
 #### Fault tolerance
 
-your ability for your service to ensure there is no single point of failure. Preventing chances of failure.
+your ability for your service to ensure there is no single point of failure.
+Preventing chances of failure.
 
-Fail-Overs is when you have a plan to shift traffic to a redundant system in case the primary system fails.
+Fail-Overs is when you have a plan to shift traffic to a redundant system in
+case the primary system fails.
 
-A common example is having a copy of your database (secondary) where all ongoing changes are synced. The secondary system is not in use util a fail over occurs and it becomes the primary database.
+A common example is having a copy of your database (secondary) where all ongoing
+changes are synced. The secondary system is not in use util a fail over occurs
+and it becomes the primary database.
 
-You can use *Azure Traffic Manager* which is a DNS based traffic balancer to fail-over from a failing primary database to a stand-by secondary database. We can also use load balancers as well.
+You can use *Azure Traffic Manager* which is a DNS based traffic balancer to
+fail-over from a failing primary database to a stand-by secondary database.
+We can also use load balancers as well.
 
 #### Disaster recovery
-Your ability to recover from a disaster and to prevent the loss of data. Solutions that rev=cover from a disaster is known as Disaster recovery (DR)
 
- - Do you have a backup?
- - How fast can you restore that backup?
- - Does your backup still work?
- - How do you ensure current live data is not corrupt?
+Your ability to recover from a disaster and to prevent the loss of data.
+Solutions that rev=cover from a disaster is known as Disaster recovery (DR)
 
-![azure_deployment_models](business_continuity_plan.png)
-![azure_deployment_models](disaster_recovery_options.png)
+- Do you have a backup?
+- How fast can you restore that backup?
+- Does your backup still work?
+- How do you ensure current live data is not corrupt?
 
+![azure_deployment_models](cloud_concepts\business_continuity_plan.png)
+![azure_deployment_models](cloud_concepts\disaster_recovery_options.png)
